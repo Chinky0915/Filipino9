@@ -1,0 +1,10 @@
+{
+  "name": "Filipino 9 - Calbayog City National High School",
+  "short_name": "Filipino 9",
+  "lang": "fil",
+  "start_url": "./index.html",
+  "display": "standalone",
+  "background_color": "#f5f7f5",
+  "theme_color": "#1f6b45",
+  "description": "Mga aralin, anunsiyo, at pagsusulit sa Filipino 9."
+}

@@ -1,0 +1,189 @@
+<!doctype html>
+<html lang="fil">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="theme-color" content="#1f6b45">
+  <meta name="description" content="Mga aralin, anunsiyo, at pagsusulit sa Filipino 9 ng Calbayog City National High School.">
+  <title>Filipino 9 | CCNHS</title>
+  <link rel="manifest" href="manifest.webmanifest">
+  <style>
+    :root{--green:#1f6b45;--green2:#2f8a5c;--yellow:#f4c542;--grey:#59636b;--pale:#f5f7f5;--white:#fff;--line:#e2e8e3}
+    *{box-sizing:border-box} body{margin:0;font-family:system-ui,-apple-system,Segoe UI,Roboto,Arial,sans-serif;color:#25312b;background:var(--pale);line-height:1.55}
+    header{background:linear-gradient(120deg,var(--green),#174c35);color:white;padding:22px 18px 18px}
+    .wrap{max-width:980px;margin:auto} .brand{display:flex;align-items:center;gap:14px}
+    .mark{width:52px;height:52px;border-radius:16px;background:var(--yellow);color:var(--green);display:grid;place-items:center;font-weight:900;font-size:22px;box-shadow:0 3px 0 #bd9427}
+    h1{font-size:clamp(1.45rem,4vw,2.1rem);line-height:1.1;margin:0} .sub{margin:6px 0 0;color:#e5eee8;font-size:.94rem}
+    nav{display:flex;gap:8px;flex-wrap:wrap;margin-top:20px}
+    nav button{border:1px solid #ffffff55;background:#ffffff12;color:white;border-radius:999px;padding:9px 15px;font-weight:700;cursor:pointer}
+    nav button[aria-current="page"]{background:var(--yellow);border-color:var(--yellow);color:#26372d}
+    main{padding:24px 16px 48px}.panel{background:white;border:1px solid var(--line);border-radius:18px;padding:clamp(17px,3vw,26px);box-shadow:0 8px 24px #193d2810;margin-bottom:18px}
+    .eyebrow{font-size:.75rem;letter-spacing:.1em;text-transform:uppercase;font-weight:800;color:var(--green2)}
+    h2{margin:4px 0 12px;font-size:1.55rem;color:var(--green)} h3{margin:0 0 8px;color:var(--grey)}
+    .announcement{border-left:5px solid var(--yellow);background:#fff9e7;padding:15px 16px;border-radius:10px}
+    .grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(220px,1fr));gap:14px}
+    .tile{border:1px solid var(--line);border-radius:14px;padding:16px;background:#fbfcfb}
+    .tile strong{color:var(--green)} .muted{color:var(--grey)}
+    .action{border:0;background:var(--green);color:white;border-radius:10px;padding:11px 16px;font-weight:750;cursor:pointer}
+    .action.secondary{background:#e9f2ec;color:var(--green)} .action:focus,button:focus{outline:3px solid #f4c542;outline-offset:2px}
+    .lesson-image{width:100%;max-height:260px;object-fit:cover;border-radius:12px;background:#edf1ed}
+    .video{width:100%;aspect-ratio:16/9;border:0;border-radius:12px;background:#edf1ed}
+    .question{padding:15px 0;border-bottom:1px solid var(--line)} .question:last-child{border:0}
+    .choice{display:flex;gap:9px;align-items:flex-start;padding:9px 11px;border:1px solid var(--line);border-radius:10px;margin:7px 0;cursor:pointer}
+    .choice:has(input:checked){border-color:var(--green2);background:#eef7f0}
+    .feedback{font-weight:700;margin-top:8px}.good{color:#167343}.try{color:#9a5a00}
+    .hidden{display:none!important} footer{text-align:center;padding:20px;color:var(--grey);font-size:.88rem}
+    @media(max-width:520px){header{padding:18px 14px 15px}.mark{width:45px;height:45px}.panel{border-radius:14px}nav{display:grid;grid-template-columns:repeat(3,1fr)}nav button{padding:9px 6px;font-size:.88rem}}
+  </style>
+</head>
+<body>
+<header>
+  <div class="wrap">
+    <div class="brand">
+      <div class="mark" aria-hidden="true">F9</div>
+      <div><h1>FILIPINO 9</h1><p class="sub">Calbayog City National High School · Online Learning Hub</p></div>
+    </div>
+    <nav aria-label="Pangunahing nabigasyon">
+      <button data-page="home" aria-current="page">Home</button>
+      <button data-page="lessons">Mga Aralin</button>
+      <button data-page="quiz">Quiz</button>
+    </nav>
+  </div>
+</header>
+<main class="wrap">
+  <section id="home" class="page">
+    <div class="panel">
+      <div class="eyebrow">Maligayang pagdating</div>
+      <h2>Wika. Panitikan. Pag-unawa.</h2>
+      <p>Isang digital na tahanan para sa pagkatuto sa Filipino 9. Basahin ang mga aralin, manood ng mga bidyo, at subukin ang iyong pag-unawa.</p>
+      <div class="grid">
+        <div class="tile"><strong>📚 Mga Aralin</strong><p class="muted">Balikan ang mahahalagang konsepto at gawain.</p><button class="action secondary" data-go="lessons">Tingnan ang mga aralin</button></div>
+        <div class="tile"><strong>✏️ Maikling Pagsusulit</strong><p class="muted">Sagutan ang limang tanong at tingnan ang agarang feedback.</p><button class="action secondary" data-go="quiz">Pumunta sa quiz</button></div>
+      </div>
+    </div>
+    <div class="panel">
+      <div class="eyebrow">Anunsiyo</div><h2 id="announcement-title">Mahalagang Paalala</h2>
+      <div class="announcement"><p id="announcement-text">Ilagay dito ang pinakabagong anunsiyo para sa mga mag-aaral ng Filipino 9.</p><small id="announcement-date" class="muted">Petsa: I-edit ng guro</small></div>
+    </div>
+  </section>
+
+  <section id="lessons" class="page hidden">
+    <div class="panel"><div class="eyebrow">Learning corner</div><h2>Mga Aralin</h2><p class="muted">Pumili ng aralin upang makita ang layunin, paliwanag, larawan, at bidyo.</p></div>
+    <div id="lesson-list" class="grid"></div>
+    <article id="lesson-detail" class="panel hidden" aria-live="polite"></article>
+  </section>
+
+  <section id="quiz" class="page hidden">
+    <div class="panel"><div class="eyebrow">Sukatin ang pag-unawa</div><h2>Limang Tanong</h2><p class="muted">Piliin ang sagot sa bawat tanong. Lalabas ang feedback pagkatapos mong isumite ang iyong sagot.</p>
+      <form id="quiz-form"><div id="quiz-questions"></div><button class="action" type="submit">Ipasa ang mga sagot</button><button class="action secondary" type="button" id="reset-quiz">Ulitin ang quiz</button></form>
+      <div id="quiz-result" class="announcement hidden" aria-live="polite" style="margin-top:16px"></div>
+    </div>
+  </section>
+</main>
+<footer>Filipino 9 · Calbayog City National High School<br>Walang kinakailangang account at walang kinokolektang personal na datos.</footer>
+<script>
+/* ================= GURO: DITO I-EDIT ANG NILALAMAN =================
+   Palitan ang anunsiyo, aralin, larawan/bidyo, at mga tanong.
+   Para sa larawan, gumamit ng image URL. Para sa YouTube, ilagay ang embed URL.
+==================================================================== */
+const SITE_CONTENT = {
+  announcement: {
+    title: "Mahalagang Paalala",
+    text: "Mga mag-aaral, basahin ang nakatalagang aralin at ihanda ang inyong mga tala para sa talakayan.",
+    date: "I-update ang petsa rito"
+  },
+  lessons: [
+    {
+      title: "Kaligirang Pangkasaysayan: 1986 hanggang Bagong Milenyo",
+      objectives: ["Natutukoy ang mahahalagang pangyayari mula 1986 hanggang pagbubukas ng Bagong Milenyo.", "Naipaliliwanag ang kaugnayan ng mga pangyayari sa mga tekstong pampanitikan."],
+      explanation: "Ang kaligirang pangkasaysayan ay tumutukoy sa mga pangyayari, kalagayang panlipunan, at kaisipang humubog sa isang akdang pampanitikan. Mula 1986, naging mahalagang paksa sa panitikan ang demokrasya, kalayaan, pagbabago, at karanasan ng mamamayan.",
+      image: "",
+      imageAlt: "Larawang kaugnay ng kasaysayan ng Pilipinas",
+      video: ""
+    },
+    {
+      title: "Banghay at Pagkakasunod-sunod ng mga Pangyayari",
+      objectives: ["Natutukoy ang simula, gitna, kasukdulan, at wakas ng kuwento.", "Nasusuri ang ugnayan ng sanhi at bunga sa banghay."],
+      explanation: "Ang banghay ay maayos na pagkakaugnay-ugnay at pagkakasunod-sunod ng mga pangyayari sa isang akda. Karaniwang sinusuri rito ang simula, papataas na aksiyon, kasukdulan, kakalasan, at wakas.",
+      image: "",
+      imageAlt: "Larawang sumasagisag sa banghay",
+      video: ""
+    }
+  ],
+  quiz: [
+    {q:"Ano ang tinutukoy ng kaligirang pangkasaysayan ng isang akda?", a:["Mga pangyayaring humubog sa panahong kinatha ang akda","Bilang ng mga tauhan sa kuwento","Haba ng bawat talata","Uri ng papel na ginamit"], correct:0, why:"Ito ang mga pangyayari at kalagayang panlipunang may kaugnayan sa pagkakabuo at pag-unawa sa akda."},
+    {q:"Alin ang mahalagang pangyayari noong 1986 sa Pilipinas?", a:["Pagpapahayag ng Batas Tydings-McDuffie","EDSA People Power Revolution","Pagkakatatag ng Unang Republika","Pagdating ng mga Espanyol"], correct:1, why:"Naganap ang EDSA People Power Revolution noong Pebrero 1986."},
+    {q:"Ano ang banghay?", a:["Paglalarawan sa tagpuan","Pagkakasunod-sunod at pagkakaugnay ng mga pangyayari","Listahan ng mga tauhan","Pamagat ng akda"], correct:1, why:"Ang banghay ang organisadong daloy ng mga pangyayari sa akda."},
+    {q:"Aling bahagi ng banghay ang pinakamataas na bahagi ng tunggalian?", a:["Simula","Panimula","Kasukdulan","Wakas"], correct:2, why:"Sa kasukdulan umaabot sa pinakamataas na antas ang tunggalian."},
+    {q:"Ano ang tawag sa ugnayan ng isang pangyayari at ng kinalabasang dulot nito?", a:["Sanhi at bunga","Talinghaga at sukat","Tauhan at tagpuan","Tugma at ritmo"], correct:0, why:"Ipinakikita ng sanhi at bunga kung bakit naganap ang isang pangyayari at ano ang naging resulta nito."}
+  ]
+};
+/* ================= WAKAS NG BAHAGING INE-EDIT NG GURO ================= */
+
+document.getElementById("announcement-title").textContent=SITE_CONTENT.announcement.title;
+document.getElementById("announcement-text").textContent=SITE_CONTENT.announcement.text;
+document.getElementById("announcement-date").textContent=SITE_CONTENT.announcement.date;
+
+function showPage(id){
+  document.querySelectorAll(".page").forEach(p=>p.classList.toggle("hidden",p.id!==id));
+  document.querySelectorAll("nav button").forEach(b=>b.setAttribute("aria-current",b.dataset.page===id?"page":"false"));
+  window.scrollTo({top:0,behavior:"smooth"});
+}
+document.querySelectorAll("[data-page]").forEach(b=>b.addEventListener("click",()=>showPage(b.dataset.page)));
+document.querySelectorAll("[data-go]").forEach(b=>b.addEventListener("click",()=>showPage(b.dataset.go)));
+
+const list=document.getElementById("lesson-list"), detail=document.getElementById("lesson-detail");
+SITE_CONTENT.lessons.forEach((lesson,i)=>{
+  const card=document.createElement("div");card.className="tile";
+  const title=document.createElement("h3");title.textContent=lesson.title;
+  const p=document.createElement("p");p.className="muted";p.textContent=lesson.objectives[0];
+  const btn=document.createElement("button");btn.className="action";btn.textContent="Buksan ang aralin";
+  btn.addEventListener("click",()=>renderLesson(i));
+  card.append(title,p,btn);list.append(card);
+});
+function renderLesson(i){
+  const l=SITE_CONTENT.lessons[i];detail.classList.remove("hidden");detail.replaceChildren();
+  const tag=document.createElement("div");tag.className="eyebrow";tag.textContent="Aralin "+(i+1);
+  const h=document.createElement("h2");h.textContent=l.title;detail.append(tag,h);
+  const h3=document.createElement("h3");h3.textContent="Mga Layunin";detail.append(h3);
+  const ul=document.createElement("ul");l.objectives.forEach(x=>{const li=document.createElement("li");li.textContent=x;ul.append(li)});detail.append(ul);
+  const eh=document.createElement("h3");eh.textContent="Paliwanag";detail.append(eh);
+  const ep=document.createElement("p");ep.textContent=l.explanation;detail.append(ep);
+  if(l.image){const img=document.createElement("img");img.className="lesson-image";img.src=l.image;img.alt=l.imageAlt||"Larawan para sa aralin";detail.append(img)}
+  if(l.video){const frame=document.createElement("iframe");frame.className="video";frame.src=l.video;frame.title="Bidyo para sa aralin";frame.loading="lazy";frame.allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture";frame.allowFullscreen=true;detail.append(frame)}
+  detail.scrollIntoView({behavior:"smooth",block:"start"});
+}
+const qbox=document.getElementById("quiz-questions");
+SITE_CONTENT.quiz.slice(0,5).forEach((q,i)=>{
+  const wrap=document.createElement("div");wrap.className="question";
+  const title=document.createElement("h3");title.textContent=(i+1)+". "+q.q;wrap.append(title);
+  q.a.forEach((answer,j)=>{
+    const label=document.createElement("label");label.className="choice";
+    const radio=document.createElement("input");radio.type="radio";radio.name="q"+i;radio.value=j;radio.required=true;
+    const span=document.createElement("span");span.textContent=answer;label.append(radio,span);wrap.append(label);
+  });
+  const fb=document.createElement("div");fb.id="fb"+i;fb.className="feedback";wrap.append(fb);qbox.append(wrap);
+});
+document.getElementById("quiz-form").addEventListener("submit",e=>{
+  e.preventDefault();let score=0;
+  SITE_CONTENT.quiz.slice(0,5).forEach((q,i)=>{
+    const selected=document.querySelector('input[name="q'+i+'"]:checked');
+    const fb=document.getElementById("fb"+i);
+    if(Number(selected.value)===q.correct){score++;fb.className="feedback good";fb.textContent="Tama! "+q.why}
+    else{fb.className="feedback try";fb.textContent="Balikan: "+q.why}
+  });
+  const result=document.getElementById("quiz-result");result.classList.remove("hidden");
+  result.textContent="Nakuha mo ang "+score+" sa 5. "+(score===5?"Mahusay!":score>=3?"Maganda ang pagsisikap. Balikan ang mga paliwanag.":"Ipagpatuloy ang pag-aaral at subukan muli.");
+  result.scrollIntoView({behavior:"smooth",block:"center"});
+});
+document.getElementById("reset-quiz").addEventListener("click",()=>{
+  document.getElementById("quiz-form").reset();
+  document.querySelectorAll(".feedback").forEach(f=>{f.textContent="";f.className="feedback"});
+  document.getElementById("quiz-result").classList.add("hidden");
+});
+if("serviceWorker" in navigator && location.protocol.startsWith("http")) {
+  window.addEventListener("load",()=>navigator.serviceWorker.register("./sw.js").catch(()=>{}));
+}
+</script>
+</body>
+</html>
